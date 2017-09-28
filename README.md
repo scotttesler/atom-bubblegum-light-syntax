@@ -4,7 +4,7 @@ An Atom syntax theme with delicious bubblegum colors.
 
 It __tones down__ less important parts (like punctuation and brackets) and highlights only the __important__ ones. This leads to a more calm color scheme, but still lets you find the stuff you're looking for.
 
-![Tone theme](https://cloud.githubusercontent.com/assets/378023/26292529/a9713500-3ef1-11e7-8dae-28a391bbc5d7.png)
+![Bubblegum syntax](https://raw.githubusercontent.com/scotttesler/atom-bubblegum-syntax/master/Screen%20Shot%202017-09-28%20at%2011.34.47%20AM.png)
 
 ## Language support
 
