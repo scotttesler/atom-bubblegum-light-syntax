@@ -1,0 +1,63 @@
+// GF MarkDown
+
+.@{s}gfm {
+
+  .@{s}link {
+    .fg-1(); // ![]()
+  }
+
+  &.@{s}markup {
+
+    &.@{s}bold   {
+      .uno-1();
+      font-weight: bold;
+    }
+
+    &.@{s}italic {
+      .duo-1();
+      font-style: italic;
+    }
+
+    &.@{s}strike {
+      .fg-1();
+      text-decoration: line-through;
+    }
+
+    &.@{s}raw {
+      .tri-1(); // Fenced code
+    }
+
+    &.@{s}raw .@{s}support,
+    &.@{s}code .@{s}support {
+      .fg-1(); // Fenced code blocks
+    }
+  }
+
+  &.@{s}quote  {
+    .uno-2();
+  }
+
+  &.@{s}table {
+    .uno-1();
+
+    .@{s}border,
+    .@{s}pipe {
+      .uno-2();
+    }
+  }
+
+  &.@{s}variable,
+  &.@{s}entity {
+    .duo-1();
+  }
+
+  &.@{s}heading-1,
+  &.@{s}heading-2,
+  &.@{s}heading-3,
+  &.@{s}heading-4,
+  &.@{s}heading-5,
+  &.@{s}heading-6 {
+    .tri-1();
+  }
+
+}

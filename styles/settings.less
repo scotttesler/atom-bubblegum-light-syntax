@@ -1,0 +1,43 @@
+
+// Custom settings
+
+.theme-tone-syntax .settings-view {
+
+  [id="tone-syntax.color.uno"],
+  [id="tone-syntax.color.duo"],
+  [id="tone-syntax.color.tri"] {
+    width: 2.75em;
+    margin-left: -3.5em;
+    position: absolute;
+    height: 4em;
+    border-radius: 4em;
+    &::-webkit-color-swatch {
+      border-radius: inherit;
+    }
+    &:hover {
+      border-color: hsla(0,0%,100%,.2);
+    }
+    &:active {
+      border-color: hsla(0,0%,100%,0);
+    }
+  }
+
+  [id="tone-syntax.color.uno"]:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -1.5em;
+    width: 6px;
+    height: 14em;
+    border-radius: 1em;
+    background-image: linear-gradient(to bottom,
+      var(--uno-1) 16%,
+      var(--uno-2) 16%, var(--uno-2) 33%,
+      var(--duo-1) 33%, var(--duo-1) 50%,
+      var(--duo-2) 50%, var(--duo-2) 66%,
+      var(--tri-1) 66%, var(--tri-1) 83%,
+      var(--tri-2) 83%
+    );
+  }
+
+}
