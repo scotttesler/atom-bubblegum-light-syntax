@@ -1,7 +1,7 @@
 {
   "name": "bubblegum-syntax",
   "theme": "syntax",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "An Atom syntax theme with delicious bubblegum colors",
   "keywords": [
     "bubblegum",
