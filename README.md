@@ -1,4 +1,4 @@
-# Atom Bubblegum Syntax
+# Atom Bubblegum Syntax (WIP)
 
 An Atom syntax theme with delicious bubblegum colors.
 
