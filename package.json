@@ -5,17 +5,15 @@
   "description": "An Atom syntax theme with delicious bubblegum colors",
   "keywords": [
     "bubblegum",
-    "tone",
+    "light",
+    "pink",
     "syntax",
-    "customizable"
+    "theme"
   ],
   "repository": "https://github.com/scotttesler/atom-bubblegum-syntax",
   "license": "MIT",
   "main": "lib/main",
   "engines": {
-    "atom": ">1.9.0 <2.0.0"
-  },
-  "dependencies": {
-    "chroma-js": "1.1.1"
+    "atom": ">=1.0.0 <2.0.0"
   }
 }

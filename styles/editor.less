@@ -2,70 +2,81 @@
 // Editor styles (background, gutter, guides)
 
 atom-text-editor {
-  .uno-1(); // @syntax-text-color
-  .bg-1(); // @syntax-background-color
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
 
   .line.cursor-line {
-    .bg-2();
-  }
-
-  .selection .region {
-    .bg-3(); // @syntax-selection-color
-  }
-
-  .cursor {
-    border-color: var(--accent); // @syntax-cursor-color
-    border-left-width: 2px;
-  }
-
-  .bracket-matcher .region {
-    border-bottom: 1px solid var(--accent);
+    background-color: @syntax-cursor-line;
   }
 
   .invisible {
-    .fg-2();
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-left: 2px solid @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .bracket-matcher .region {
+    border-bottom: 1px solid @syntax-cursor-color;
+    box-sizing: border-box;
   }
 
   .invisible-character {
-    .fg-2(); // @syntax-invisible-character-color
-    -webkit-font-smoothing: antialiased;
+    color: @syntax-invisible-character-color;
   }
 
   .indent-guide {
-    .fg-2(); // @syntax-indent-guide-color
+    color: @syntax-indent-guide-color;
   }
 
   .wrap-guide {
-    .bg-2(); // @syntax-wrap-guide-color
+    background-color: @syntax-wrap-guide-color;
   }
 
   // find + replace
   .find-result .region.region.region,
   .current-result .region.region.region {
-    border: none;
-    border-radius: 0px;
-    background-color: var(--duo-1);
-    opacity: .15;
-    transition: none;
+    border-radius: 2px;
+    background-color: @syntax-result-marker-color;
+    transition: border-color .4s;
   }
-
-  // highlight-selected
-  // Attribute selector needed since background will be asked to change to -> syntax--background
-  [class="highlight highlight-selected background"] .region.region.region.region {
-    background-color: var(--duo-1);
-    opacity: .15;
+  .find-result .region.region.region {
+    border: 2px solid transparent;
+  }
+  .current-result .region.region.region {
+    border: 2px solid @syntax-result-marker-color-selected;
+    transition-duration: .1s;
   }
 
   .gutter {
 
     .line-number {
-      .fg-1(); // @syntax-gutter-text-color
+      color: @syntax-gutter-text-color;
       -webkit-font-smoothing: antialiased;
 
-      &.git-line-removed:before {
+      &.cursor-line {
+        color: @syntax-gutter-text-color-selected;
+        background-color: @syntax-gutter-background-color-selected;
+      }
+      &.cursor-line-no-selection {
+        background-color: transparent;
+      }
+
+      .icon-right {
+        color: @syntax-text-color;
+      }
+    }
+
+    &:not(.git-diff-icon) .line-number.git-line-removed {
+      &.git-line-removed::before {
         bottom: -3px;
       }
-      &.git-line-removed:after {
+      &::after {
         content: "";
         position: absolute;
         left: 0px;
@@ -74,25 +85,12 @@ atom-text-editor {
         border-bottom: 1px dotted fade(@syntax-color-removed, 50%);
         pointer-events: none;
       }
-
-      &.cursor-line {
-        .uno-1(); // @syntax-gutter-text-color-selected
-        .bg-2(); // @syntax-gutter-background-color-selected
-      }
-
-      &.cursor-line-no-selection {
-        background-color: transparent;
-      }
-
-      .icon-right {
-        .uno-1();
-      }
     }
   }
 
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    .uno-1();
+    color: @syntax-gutter-text-color-selected;
   }
 }
