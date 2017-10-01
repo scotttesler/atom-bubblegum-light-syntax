@@ -10,9 +10,8 @@
     "syntax",
     "theme"
   ],
-  "repository": "https://github.com/scotttesler/atom-bubblegum-syntax",
+  "repository": "https://github.com/scotttesler/atom-bubblegum-light-syntax",
   "license": "MIT",
-  "main": "lib/main",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   }
